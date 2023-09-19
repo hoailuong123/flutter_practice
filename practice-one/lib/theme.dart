@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+ThemeData lightTheme = ThemeData(brightness: Brightness.light);
+ThemeData darkTheme = ThemeData(brightness: Brightness.dark);
 
 ThemeData theme() {
   return ThemeData(
@@ -11,8 +13,6 @@ ThemeData theme() {
       visualDensity: VisualDensity.adaptivePlatformDensity);
 }
 
-
-
 AppBarTheme appBarTheme() {
   return const AppBarTheme(
       color: Colors.white,
@@ -23,19 +23,16 @@ AppBarTheme appBarTheme() {
 
 TextTheme textTheme() {
   return const TextTheme(
-      bodyLarge: TextStyle(color: Colors.white));
-      bodyMedium: TextStyle(color: Colors.black );
+    bodyLarge: TextStyle(color: Colors.white),
+    bodyMedium: TextStyle(color: Colors.black),
+  );
 }
 
 InputDecorationTheme inputDecorationTheme() {
   var outlineInputBorder = OutlineInputBorder(
-        borderRadius: BorderRadius.circular(28),      
-        gapPadding: 10);
+      borderRadius: BorderRadius.circular(28), gapPadding: 10);
   return InputDecorationTheme(
-    contentPadding: const EdgeInsets.symmetric(horizontal: 45, vertical: 20),
-    enabledBorder: outlineInputBorder,
-    focusedBorder: outlineInputBorder,
-    border: outlineInputBorder
-  );
+      enabledBorder: outlineInputBorder,
+      focusedBorder: outlineInputBorder,
+      border: outlineInputBorder);
 }
-
