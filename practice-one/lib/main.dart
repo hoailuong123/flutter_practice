@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import './screens/cart/cart_screen.dart';
 import './screens/congrats/congrats_screen.dart';
 import './screens/home/home_screen.dart';
@@ -18,21 +19,6 @@ void main() {
       builder: (context) => MyApp(), // Wrap your app
     ),
   );
-
-  runApp(
-    Widgetbook(
-      children: [
-        WidgetbookPage(
-          name: '',
-          builder: (context) => MyButtonWidget(),
-        ),
-        WidgetbookPage(
-          name: '',
-          builder: (context) => MyTextWidget(),
-        ),
-      ],
-    ),
-  );
 }
 
 class MyApp extends StatelessWidget {
@@ -43,6 +29,15 @@ class MyApp extends StatelessWidget {
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
       theme: ThemeData.light(),
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: [
+        Locale('en', ''),
+        Locale('fr', ''),
+      ],
       darkTheme: ThemeData.dark(),
       home: const HomeScreen(),
     );
