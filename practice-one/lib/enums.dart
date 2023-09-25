@@ -1,0 +1,2 @@
+enum MenuState { home,profile }
+
