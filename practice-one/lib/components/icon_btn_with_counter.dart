@@ -52,7 +52,7 @@ class _IconBtnWithCounterState extends State<IconBtnWithCounter> {
             height: 46,
             width: 46,
             decoration: BoxDecoration(
-              color: kSecondaryColor.withOpacity(0.1),
+              color: Colors.black,
               shape: BoxShape.circle,
             ),
             child: Image.asset(widget.plusIconAsset), 
@@ -64,7 +64,7 @@ class _IconBtnWithCounterState extends State<IconBtnWithCounter> {
               height: 20,
               width: 20,
               decoration: BoxDecoration(
-                color: Color(0xFFFF4848),
+                color: Colors.black,
                 shape: BoxShape.circle,
                 border: Border.all(width: 1.5, color: Colors.white),
               ),
