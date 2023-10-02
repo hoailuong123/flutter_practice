@@ -12,6 +12,7 @@ environment:
 flutter_native_splash: 
   image: assets/images/logo-splash.png
   color: "FFFFFF"
+  fullscreen: true
 
 dependencies:
   bloc: ^8.1.2
@@ -50,6 +51,31 @@ flutter:
     - assets/images/
     - assets/icons/
     - assets/fonts/
+
+  fonts:
+    - family: Gelasio
+      fonts:
+        - asset: assets/fonts/Gelasio-Regular.ttf
+        - asset: assets/fonts/Gelasio-Italic.ttf
+          style: italic
+        - asset: assets/fonts/Gelasio-Bold.ttf
+          weight: 700
+          
+    - family: Nunito Sans
+      fonts:
+        - asset: assets/fonts/NunitoSans_10pt-Regular.ttf
+        - asset: assets/fonts/NunitoSans_10pt-Italic.ttf
+          style: italic
+        - asset: assets/fonts/NunitoSans_10pt-Bold.ttf
+          weight: 700
+    - family: Merriweather
+      fonts:
+        - asset: assets/fonts/Merriweather-Regular.ttf
+        - asset: assets/fonts/Merriweather-Italic.ttf
+          style: italic
+        - asset: assets/fonts/Merriweather-Bold.ttf
+          weight: 700
+          
 
 
 
