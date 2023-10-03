@@ -15,16 +15,17 @@ class LogInScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            LoginScreenTopIcon(),
-            WelcomeText(),
-            LoginForm(),
-            Container(
-              padding: EdgeInsets.only(top: 57),
-              alignment: Alignment.center,
-              child: DefaultButton(
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              LoginScreenTopIcon(),
+              WelcomeText(),
+              LoginForm(),
+              Container(
+                padding: EdgeInsets.only(top: 57),
+                alignment: Alignment.center,
+                child: DefaultButton(
                   text: "Log in",
                   press: () {
                     Navigator.pushReplacementNamed(
@@ -34,9 +35,11 @@ class LogInScreen extends StatelessWidget {
                   height: 50,
                   textFontFamily: 'Nunito Sans',
                   textSize: 18,
-                  textWeight: FontWeight.w600),
-            ),
-          ],
+                  textWeight: FontWeight.w600,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
